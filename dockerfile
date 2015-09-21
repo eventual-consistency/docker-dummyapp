@@ -15,4 +15,5 @@ RUN cd /src; npm install
 # Expose the service port on the container host
 EXPOSE  3000
 
-# Run NodeCMD ["node", "/src/bin/www"]
+# Run Node
+CMD ["node", "/src/bin/www"]
