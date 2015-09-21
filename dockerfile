@@ -1,10 +1,10 @@
 FROM	centos:centos7
 
-#  Install EPEL Package library
-RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+#  Install node Package library
+RUN     curl --silent --location https://rpm.nodesource.com/setup | bash 
 
 # Install Node.js and npm
-RUN     yum install -y npm
+RUN     yum -y install nodejs 
 
 # Copy current folder to /src inside the container
 COPY . /src
